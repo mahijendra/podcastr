@@ -19,29 +19,6 @@ export const createPodcast = mutation({
   },
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
-    console.log(
-      args.audioStorageId,
-      // user[0]._id,
-      args.podcastTitle,
-      args.podcastDescription,
-      args.audioUrl,
-      args.imageUrl,
-      args.imageStorageId,
-      // user[0].name,
-      // user[0].clerkId,
-      args.voicePrompt,
-      args.imagePrompt,
-      args.voiceType,
-      args.views,
-      // user[0].imageUrl,
-      args.audioDuration
-    );
-
-
-    
-
-    console.log("====================================");
-    console.log("====================================");
     if (!identity) {
       throw new ConvexError("User not authenticated");
     }
